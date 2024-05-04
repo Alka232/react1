@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import "./App.css";
+import Counter from './Components/Counter'
 
 const App = () => {
   // useState Hook
@@ -18,7 +19,8 @@ const App = () => {
   }
 
   return (
-    <div className='flex flex-col gap-8 h-screen justify-center items-center'>
+    <>
+    <div className='flex flex-col gap-8 justify-center items-center'>
             <h1>Count: <span>{count}</span></h1>
             <div className='flex gap-6'>
               <button className='border-2 border-emerald-400 cursor-pointer\ py-1 px-4 rounded-md text-white' onClick={increment}>Increment</button>
@@ -27,7 +29,11 @@ const App = () => {
 
               <button className='border-2 border-white cursor-pointer py-1 px-4 rounded-md text-white' onClick={reset}>Reset</button>
             </div>
+
     </div>
+    <Counter/>
+    </>
+    
   )
 }
 
